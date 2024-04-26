@@ -6,7 +6,7 @@
 
 		if (cookie == null) {
 			alert("NUH UH. GO LOG IN. >:3c");
-			window.location.href = "/signin";
+			window.location.href = "/";
 		} else {
 			console.log("let them in");
 		}
