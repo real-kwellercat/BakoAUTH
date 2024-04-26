@@ -1,11 +1,15 @@
 <script>
 	import { browser } from "$app/environment";
-	const cookie = browser.cookie.match(/^(.*;)?\s*loggedin\s*=\s*[^;]+(.*)?$/);
-	if (cookie == null) {
-		alert("NUH UH. GO LOG IN. >:3c");
-		window.location.href = "/signin";
-	} else {
-		console.log("let them in");
+
+	if (browser) {
+		const cookie = document.cookie.match(/^\s*loggedin\s*=\s*([^;]+)/);
+
+		if (cookie == null) {
+			alert("NUH UH. GO LOG IN. >:3c");
+			window.location.href = "/signin";
+		} else {
+			console.log("let them in");
+		}
 	}
 </script>
 
